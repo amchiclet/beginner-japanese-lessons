@@ -22,3 +22,10 @@ yoyaku|予約しています
 kaiin-desu|会員です
 kaiin-card|会員カード
 chekku-in-onegai|チェックインをお願いします
+# what the clerk might say (listening)
+clerk-kaiin|会員でいらっしゃいますか
+clerk-card|会員カードをお願いします
+clerk-hajimete|初めてのご利用ですか
+clerk-yoyaku|ご予約はされていますか
+clerk-hitori|お一人様ですか
+clerk-smoking|喫煙ですか、禁煙ですか
