@@ -1,0 +1,22 @@
+# Lesson 4 audio manifest — slug|Japanese text
+# regenerate:  ../../assets/gen-audio.sh lessons/audio/lesson4.manifest lessons/audio
+# the pattern pieces
+doko|どこ
+doko-desu-ka|どこですか
+# places to ask about (katakana loanwords + survival kanji)
+toire|トイレ
+eki|駅
+deguchi|出口
+iriguchi|入口
+hoteru|ホテル
+konbini|コンビニ
+takushi|タクシー
+# full pattern sentences
+toire-doko|トイレはどこですか
+eki-doko|駅はどこですか
+hoteru-doko|ホテルはどこですか
+# what you'll hear back
+asoko|あそこ
+massugu|まっすぐ
+migi|右
+hidari|左

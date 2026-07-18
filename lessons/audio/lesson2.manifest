@@ -1,0 +1,21 @@
+# Lesson 2 audio manifest — slug|Japanese text
+# regenerate:  ../../assets/gen-audio.sh lessons/audio/lesson2.manifest lessons/audio
+# vowels (v-prefixed to avoid clashing with lesson 1 slugs)
+va|ア
+vi|イ
+vu|ウ
+ve|エ
+vo|オ
+# long-mark demo (a held vowel)
+kaa|カー
+# game / menu words you already see on screen
+menyu|メニュー
+sebu|セーブ
+sutato|スタート
+aitemu|アイテム
+reberu|レベル
+gemu|ゲーム
+# words that show the standalone vowels ア イ ウ エ オ
+aisu|アイス
+eakon|エアコン
+omuraisu|オムライス

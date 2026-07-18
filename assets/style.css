@@ -1,0 +1,244 @@
+/* ============================================================
+   Tourist Japanese — shared lesson & reference stylesheet
+   Tufte-inspired: quiet, readable, prints well. Light + dark.
+   Linked by every lesson and reference doc so the course reads
+   as one thing. Add components here, never inline-duplicate.
+   ============================================================ */
+
+:root {
+  --bg:        #fdfcf8;
+  --ink:       #1a1a17;
+  --muted:     #6b6a63;
+  --rule:      #e2ded2;
+  --accent:    #9b2226;   /* deep vermilion — the one strong colour */
+  --accent-sf: #f6e7e5;   /* accent wash for boxes */
+  --jp-ink:    #111;
+  --good:      #2d6a4f;
+  --good-bg:   #e6f0ea;
+  --bad:       #9b2226;
+  --bad-bg:    #f6e3e2;
+  --maxw:      40rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:#16150f; --ink:#eae7dc; --muted:#a4a091; --rule:#33312a;
+    --accent:#e5989b; --accent-sf:#2a1c1c; --jp-ink:#f2efe6;
+    --good:#8fd6b4; --good-bg:#17271f; --bad:#e5989b; --bad-bg:#2a1919;
+  }
+}
+:root[data-theme="light"]{ --bg:#fdfcf8;--ink:#1a1a17;--muted:#6b6a63;--rule:#e2ded2;--accent:#9b2226;--accent-sf:#f6e7e5;--jp-ink:#111;--good:#2d6a4f;--good-bg:#e6f0ea;--bad:#9b2226;--bad-bg:#f6e3e2; }
+:root[data-theme="dark"]{ --bg:#16150f;--ink:#eae7dc;--muted:#a4a091;--rule:#33312a;--accent:#e5989b;--accent-sf:#2a1c1c;--jp-ink:#f2efe6;--good:#8fd6b4;--good-bg:#17271f;--bad:#e5989b;--bad-bg:#2a1919; }
+
+html { font-size: 19px; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.62;
+  max-width: var(--maxw);
+  margin: 3.5rem auto;
+  padding: 0 1.25rem 5rem;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- header / meta ---- */
+.kicker {
+  font: 600 0.72rem/1 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 0.6rem;
+}
+h1 { font-size: 2rem; line-height: 1.12; margin: 0 0 0.4rem; font-weight: 600; }
+h2 { font-size: 1.28rem; margin: 2.6rem 0 0.6rem; font-weight: 600;
+     padding-bottom: 0.25rem; border-bottom: 1px solid var(--rule); }
+h3 { font-size: 1.05rem; margin: 1.8rem 0 0.4rem; font-weight: 600; }
+.lede { color: var(--muted); font-size: 1.08rem; margin: 0 0 1.6rem; font-style: italic; }
+p, li { font-variant-numeric: oldstyle-nums; }
+a { color: var(--accent); text-underline-offset: 2px; }
+
+/* ---- Japanese text ---- */
+.jp {
+  font-family: "Hiragino Mincho ProN", "Hiragino Kaku Gothic ProN",
+               "Yu Mincho", "Noto Serif JP", "Noto Sans JP", serif;
+  color: var(--jp-ink);
+  font-feature-settings: normal;
+}
+.jp-lg { font-size: 1.7rem; letter-spacing: 0.04em; }
+.jp-xl { font-size: 2.6rem; letter-spacing: 0.05em; line-height: 1.3; }
+.romaji { font-style: italic; color: var(--muted); }
+.gloss  { color: var(--muted); }
+
+/* ruby-style stacking: romaji sits under the kana */
+ruby.rr { ruby-position: under; }
+ruby.rr rt { font-style: italic; color: var(--muted); font-size: 0.62em; }
+
+/* ---- the pattern box: the star of each lesson ---- */
+.pattern {
+  border: 1px solid var(--rule); border-left: 4px solid var(--accent);
+  background: var(--accent-sf);
+  border-radius: 4px; padding: 1.1rem 1.25rem; margin: 1.6rem 0;
+}
+.pattern .formula { font-size: 1.5rem; margin: 0.2rem 0 0.5rem; }
+.pattern .slot { color: var(--accent); font-weight: 700; }
+.pattern .lit { color: var(--muted); font-size: 0.92rem; }
+
+/* ---- vocab / word tables ---- */
+table.vocab { border-collapse: collapse; width: 100%; margin: 1.2rem 0; }
+table.vocab th, table.vocab td {
+  text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--rule);
+  vertical-align: baseline;
+}
+table.vocab th { font: 600 0.7rem/1 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+table.vocab .jp { font-size: 1.25rem; white-space: nowrap; }
+table.vocab td.romaji { font-style: italic; }
+.scroll-x { overflow-x: auto; }
+
+/* ---- callouts ---- */
+.note, .tip, .warn {
+  border-radius: 4px; padding: 0.75rem 1rem; margin: 1.2rem 0; font-size: 0.96rem;
+  border: 1px solid var(--rule);
+}
+.tip  { background: var(--good-bg); border-color: var(--good); }
+.warn { background: var(--bad-bg);  border-color: var(--bad); }
+.note { background: transparent; }
+.note b, .tip b, .warn b { }
+
+/* ---- citations / sidenotes ---- */
+.cite { font-size: 0.82rem; color: var(--muted); }
+sup.ref a { text-decoration: none; color: var(--accent); font-weight: 600; }
+.sources { font-size: 0.85rem; color: var(--muted); border-top: 1px solid var(--rule);
+  margin-top: 2.5rem; padding-top: 1rem; }
+.sources li { margin: 0.3rem 0; }
+
+/* ---- interactive quiz component (see quiz.js) ---- */
+.quiz { border: 1px solid var(--rule); border-radius: 6px; padding: 1.1rem 1.25rem;
+  margin: 1.5rem 0; background: color-mix(in srgb, var(--bg) 92%, var(--ink)); }
+.quiz h3 { margin-top: 0; }
+.q { margin: 1.2rem 0; }
+.q:first-of-type { margin-top: 0.4rem; }
+.q .prompt { font-weight: 600; margin-bottom: 0.6rem; }
+.q .prompt .jp { font-weight: 400; }
+.opts { display: grid; gap: 0.5rem; }
+.opt {
+  display: block; width: 100%; text-align: left; cursor: pointer;
+  font: inherit; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--rule); border-radius: 5px;
+  padding: 0.55rem 0.8rem; transition: border-color .12s, background .12s;
+}
+.opt:hover { border-color: var(--accent); }
+.opt:disabled { cursor: default; opacity: 1; }
+.opt.correct { background: var(--good-bg); border-color: var(--good); color: var(--ink); }
+.opt.wrong   { background: var(--bad-bg);  border-color: var(--bad);  color: var(--ink); }
+.feedback { margin-top: 0.55rem; font-size: 0.92rem; min-height: 1.2em; }
+.feedback.correct { color: var(--good); }
+.feedback.wrong   { color: var(--bad); }
+
+/* recall (type-in) exercise */
+.recall input[type=text] {
+  font: inherit; padding: 0.4rem 0.6rem; border: 1px solid var(--rule);
+  border-radius: 5px; background: var(--bg); color: var(--ink); width: 12rem;
+}
+.recall button.check {
+  font: 600 0.9rem ui-sans-serif, system-ui, sans-serif; cursor: pointer;
+  padding: 0.42rem 0.9rem; margin-left: 0.4rem; border-radius: 5px;
+  border: 1px solid var(--accent); background: var(--accent); color: #fff;
+}
+.reveal { background: none; border: none; color: var(--accent); cursor: pointer;
+  font: inherit; text-decoration: underline; padding: 0; margin-left: 0.6rem; }
+
+.score { font: 600 0.95rem ui-sans-serif, system-ui, sans-serif; color: var(--muted);
+  margin-top: 1rem; }
+
+/* ---- flashcards (tap to flip) ---- */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem,1fr));
+  gap: 0.7rem; margin: 1.3rem 0; }
+.card { border: 1px solid var(--rule); border-radius: 6px; padding: 1rem 0.6rem;
+  text-align: center; cursor: pointer; background: var(--bg); min-height: 4.6rem;
+  display: flex; align-items: center; justify-content: center; }
+.card .back { display: none; }
+.card.flipped .front { display: none; }
+.card.flipped .back { display: block; }
+.card .jp { font-size: 1.5rem; }
+
+/* ---- SRS drill (see srs.js): repeatable, randomized flashcards ---- */
+.srs { border: 1px solid var(--rule); border-radius: 8px; padding: 1rem 1.1rem 1.2rem;
+  margin: 1.5rem 0; background: color-mix(in srgb, var(--bg) 92%, var(--ink)); }
+.srs-bar { display: flex; justify-content: space-between; align-items: center;
+  gap: 0.6rem; flex-wrap: wrap; }
+.srs-title { font: 600 1.05rem/1 ui-sans-serif, system-ui, sans-serif; }
+.srs-ctrls { display: flex; gap: 0.4rem; }
+.srs-toggle { font: 500 0.78rem ui-sans-serif, system-ui, sans-serif; cursor: pointer;
+  background: var(--bg); color: var(--muted); border: 1px solid var(--rule);
+  border-radius: 999px; padding: 0.32rem 0.7rem; }
+.srs-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.srs-counter { font: 500 0.82rem ui-sans-serif, system-ui, sans-serif; color: var(--muted);
+  margin: 0.5rem 0 0.7rem; }
+.srs-stage { min-height: 8.5rem; display: flex; }
+.srs-card { flex: 1; border: 1px solid var(--rule); border-radius: 8px; cursor: pointer;
+  background: var(--bg); padding: 1.4rem 1rem; text-align: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.35rem; transition: border-color .12s; }
+.srs-card:hover { border-color: var(--accent); }
+.srs-hint { font: 400 0.8rem ui-sans-serif, system-ui, sans-serif; color: var(--muted); font-style: italic; }
+.srs-div { width: 60%; border: none; border-top: 1px solid var(--rule); margin: 0.5rem 0; }
+.srs-romaji { font-size: 1.15rem; }
+.srs-en { font-size: 1.1rem; }
+.srs-thai { font-size: 0.95rem; color: var(--muted); margin-top: 0.2rem; }
+.srs-actions { display: flex; gap: 0.6rem; margin-top: 0.8rem; }
+.srs-actions button { flex: 1; font: 600 0.95rem ui-sans-serif, system-ui, sans-serif;
+  cursor: pointer; padding: 0.6rem; border-radius: 6px; border: 1px solid var(--rule); }
+.srs-again { background: var(--bad-bg); border-color: var(--bad); color: var(--ink); }
+.srs-got { background: var(--good-bg); border-color: var(--good); color: var(--ink); }
+.srs-done { flex: 1; text-align: center; align-self: center; font-size: 1.15rem; }
+.srs-card .say { margin-top: 0.2rem; }
+
+/* ---- 🔊 play button (see speak.js) ---- */
+button.say {
+  font-size: 0.85rem; line-height: 1; cursor: pointer; vertical-align: middle;
+  background: var(--bg); border: 1px solid var(--rule); border-radius: 999px;
+  padding: 0.2rem 0.45rem; margin-left: 0.35rem; color: var(--accent);
+  transition: border-color .12s, background .12s;
+}
+button.say:hover { border-color: var(--accent); background: var(--accent-sf); }
+.pattern .say { font-size: 1rem; padding: 0.28rem 0.55rem; }
+@media print { button.say { display: none; } }
+
+/* ---- backstory / history aside: sprinkled etymology + history ---- */
+.backstory {
+  border: 1px solid var(--rule); border-left: 4px solid #b08968;
+  background: color-mix(in srgb, var(--bg) 88%, #b08968);
+  border-radius: 4px; padding: 0.85rem 1.05rem 0.85rem 1.05rem; margin: 1.6rem 0;
+  font-size: 0.94rem;
+}
+.backstory .bs-head {
+  font: 700 0.72rem/1 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.13em; text-transform: uppercase; color: #8a5a3b;
+  margin: 0 0 0.45rem; display: flex; align-items: center; gap: 0.4rem;
+}
+@media (prefers-color-scheme: dark) {
+  .backstory { background: color-mix(in srgb, var(--bg) 82%, #b08968); }
+  .backstory .bs-head { color: #d0a884; }
+}
+:root[data-theme="dark"] .backstory { background: color-mix(in srgb, var(--bg) 82%, #b08968); }
+:root[data-theme="dark"] .backstory .bs-head { color: #d0a884; }
+.backstory p { margin: 0.4rem 0; }
+.backstory p:first-of-type { margin-top: 0; }
+
+/* ---- footer nav ---- */
+.lesson-nav { display: flex; justify-content: space-between; gap: 1rem;
+  margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--rule);
+  font: 500 0.9rem ui-sans-serif, system-ui, sans-serif; }
+.ask { background: var(--accent-sf); border: 1px dashed var(--accent);
+  border-radius: 6px; padding: 0.9rem 1.1rem; margin: 2.2rem 0 0;
+  font-size: 0.95rem; }
+
+/* ---- print ---- */
+@media print {
+  :root { --bg:#fff; --ink:#000; --jp-ink:#000; }
+  body { margin: 0; max-width: none; font-size: 12pt; }
+  .quiz, .ask, .lesson-nav { border: 1px solid #ccc; }
+  .opt { border: 1px solid #999; }
+  a { color: #000; text-decoration: underline; }
+  .no-print { display: none; }
+}

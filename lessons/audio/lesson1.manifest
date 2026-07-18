@@ -1,0 +1,14 @@
+# Lesson 1 audio manifest — slug|Japanese text
+# regenerate:  ../../assets/gen-audio.sh lessons/audio/lesson1.manifest lessons/audio
+sumimasen|すみません
+kore|これ
+kudasai|ください
+kohi|コーヒー
+omizu|お水
+biru|ビール
+okaikei|お会計
+o|を
+kore-o-kudasai|これをください
+sumimasen-kore-o-kudasai|すみません、これをください
+kohi-o-kudasai|コーヒーをください
+okaikei-o-kudasai|お会計をください

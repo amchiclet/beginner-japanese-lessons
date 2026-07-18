@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# editor / scratch
+*.swp
+*.log
+scratchpad/
+
+# personal teaching state — kept local, not published
+NOTES.md
+MISSION.md
+learning-records/

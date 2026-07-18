@@ -1,0 +1,20 @@
+# Lesson 3 audio manifest — slug|Japanese text
+# regenerate:  ../../assets/gen-audio.sh lessons/audio/lesson3.manifest lessons/audio
+# K-row
+ka|カ
+ki|キ
+ku|ク
+ke|ケ
+ko|コ
+# G-row (K-row + dakuten ゛ = voiced)
+ga|ガ
+gi|ギ
+gu|グ
+ge|ゲ
+go|ゴ
+# whole words you can now read
+keki|ケーキ
+kokoa|ココア
+kiui|キウイ
+oke|オーケー
+gia|ギア
