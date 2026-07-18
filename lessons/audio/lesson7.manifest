@@ -1,0 +1,18 @@
+# Lesson 7 audio — convenience store listening
+# regenerate: ../../assets/gen-audio.sh lessons/audio/lesson7.manifest lessons/audio
+# clerk questions (catch the keyword)
+fukuro|袋はいりますか
+atatame|温めますか
+ohashi|お箸はおつけしますか
+pointcard|ポイントカードはお持ちですか
+shiharai|お支払いは現金ですか、カードですか
+reshiito|レシートはご利用ですか
+# the two universal answers + payment answers
+daijoubu|大丈夫です
+genkin-de|現金で
+kado-de|カードで
+irimasen|いりません
+# single keywords for ear-training
+fukuro-word|袋
+reshiito-word|レシート
+genkin-word|現金
