@@ -1,0 +1,15 @@
+# Lesson 8 audio — renting a car (counter)
+# regenerate: ../../assets/gen-audio.sh lessons/audio/lesson8.manifest lessons/audio
+menkyosho|免許証
+kokusai-menkyo|国際免許証
+hoken|保険
+mantan|満タン
+navi|ナビ
+# phrases you produce
+navi-eigo|ナビを英語にできますか
+etc-onegai|ETCカードをお願いします
+# what the clerk says
+clerk-menkyo|免許証をお願いします
+clerk-hoken|保険はどうしますか
+clerk-mantan|満タンで返してください
+clerk-nanji|何時に返しますか

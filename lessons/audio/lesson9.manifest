@@ -1,0 +1,18 @@
+# Lesson 9 audio — parking, tolls & signs
+# regenerate: ../../assets/gen-audio.sh lessons/audio/lesson9.manifest lessons/audio
+# parking signs (reading)
+chushajo|駐車場
+mansha|満車
+kusha|空車
+ryokin|料金
+seisanki|精算機
+koin-parking|コインパーキング
+yuryo|有料
+muryo|無料
+# highway signs
+kosoku|高速道路
+ryokinjo|料金所
+ippan|一般
+# phrases you produce (reusing patterns)
+seisan-doko|精算機はどこですか
+ikura|いくらですか
